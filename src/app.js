@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import ContactList from './ContactList';
+
 class App extends React.Component {
 
   constructor(){
@@ -23,6 +25,7 @@ class App extends React.Component {
         <input type="text" onChange={this.update.bind(this)} />
         <h1>{this.state.txt}</h1>
         <h3> I ate {this.state.cat} apples</h3>
+        <ContactList />
       </div>
     );
   }
@@ -31,7 +34,7 @@ class App extends React.Component {
 
 //impongo il tipo alle proprietà
 App.propTypes = {
-  txt: React.PropTypes.string, 
+  txt: React.PropTypes.string,
   cat: React.PropTypes.number.isRequired
 }
 
